@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div class="header">
+      <h1>Runeterra Card Game</h1> 
+      <p>Aggro = Noxus︱ Midrange = Demacia︱ Control = Shadow Isles </p>
+      <p>Aggro beats Control︱ Midrange beats Aggro︱ Control beats Midrange </p>
+    </div>
+  
+  <div class="content">
+    <div class="selection">
+      <h2>Choose your deck</h2>
+      <div class="figures">
+        <div class="noxus" data-button="noxus">
+          <img src="noxus.webp" id='noxus'>
+          <div class="text">Noxus</div>
+        </div>
+        <div class="demacia" data-button="demacia">
+          <img src="demacia.webp" id='noxus'>
+          <div class="text">Demacia</div>
+        </div>
+        <div class="shadow-isles" data-button="shadow-isles">
+          <img src="shadow-isles.webp" id='shadow-isles'>
+          <div class="text">Shadow Isles</div>
+        </div>
+      </div>
+    </div>
+    <div class="selection">
+      <h2>Opponent Chose</h2>
+      <div class="figures">
+        <div class="computer">
+          <div class="computerSign" id='computerSign'>?</div>
+        </div>
+      </div>
+    </div>  
+
+  </div>
+
+  <div class="result">
+    <p id='whoWon'>  </p>
+    <h3> Score </h3>
+      <p> You: <span id='yourScore'>0</span> ︱ Opponent <span id='opponentScore'>0</span></p>
+   
+  </div>
+  
+
+
+    <div class="footer">
+      Copyrights The Odin Project
+    </div>
+
+
+  </body>
+  <script src="script.js"></script>
+</html>
