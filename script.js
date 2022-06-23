@@ -2,14 +2,14 @@ const options = ['noxus', 'demacia', 'shadow-isles'];
 function computerPlay() {
     computerSelection = options[Math.floor(Math.random() * options.length)];
     if (computerSelection=='noxus'){
-        computerSign.textContent = 'Noxus'
-    }
+        compNoxus.style.display = 'block';
+    }else compNoxus.style.display = 'none';
     if (computerSelection=='demacia'){
-        computerSign.textContent = 'Demacia'
-    }
+        compDemacia.style.display = 'block';
+    }else compDemacia.style.display = 'none';
     if (computerSelection=='shadow-isles'){
-        computerSign.textContent = 'Shadow Isles'
-    }
+        compShadow.style.display = 'block';
+    }else compShadow.style.display = 'none';
     return computerSelection;
 }
 
@@ -96,10 +96,13 @@ function game(){
 const noxusBtn = document.querySelector('.noxus');
 const demaciaBtn = document.querySelector('.demacia');
 const shadowBtn = document.querySelector('.shadow-isles');
-const computerSign = document.getElementById('computerSign')
+
 const whoWon = document.getElementById('whoWon')
 const yourScore = document.getElementById('yourScore')
 const opponentScore = document.getElementById('opponentScore')
+const compNoxus = document.querySelector('#compNoxus');
+const compDemacia = document.querySelector('#compDemacia');
+const compShadow = document.querySelector('#compShadow');
 
 noxusBtn.addEventListener('click', playGame);
 demaciaBtn.addEventListener('click', playGame);
