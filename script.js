@@ -99,6 +99,7 @@ const shadowBtn = document.querySelector('.shadow-isles');
 
 const whoWon = document.getElementById('whoWon')
 const yourScore = document.getElementById('yourScore')
+const finalResult = document.getElementById('finalResult')
 const opponentScore = document.getElementById('opponentScore')
 const compNoxus = document.querySelector('#compNoxus');
 const compDemacia = document.querySelector('#compDemacia');
@@ -110,7 +111,9 @@ shadowBtn.addEventListener('click', playGame);
 
 let playerScore=0;
 let computerScore=0;
+
 function playGame(playerSelection,computerSelection) {
+    finalResult.textContent = '';
     playerSelection = this.dataset.button;
     computerSelection = computerPlay();
     play(playerSelection,computerSelection);
@@ -122,5 +125,18 @@ function playGame(playerSelection,computerSelection) {
     }
     yourScore.textContent = playerScore;
     opponentScore.textContent = computerScore;
+    if (playerScore>=5 || computerScore >=5) {
+        gameOver();
+    }
 
 }
+function gameOver() {
+    if (playerScore>computerScore) {
+        finalResult.textContent = 'Game Over, you win';
+    }else{
+        finalResult.textContent = 'Game Over, you lose';
+    }
+    playerScore=0;
+    computerScore=0;
+}
+
